@@ -9,8 +9,8 @@ const Carousel = () => {
 
   useEffect(() => {
     setResponsive({
-      0: { items: 2 },
-      576: { items: 3 },
+      0: { items: 5 },
+      576: { items: 5 },
       1024: { items: 5 },
     });
   }, []); // Set responsive configuration after component mounts
@@ -26,13 +26,13 @@ const Carousel = () => {
   ];
 
   return (
-    <div className="mx-auto max-w-7xl 2xl:container w-full mb-4 border pt-6 pb-6">
+    <div className="mx-auto max-w-7xl 2xl:container mb-4 border pt-6 pb-6">
       <p className="text-center font-bold hidden lg:block">Over 32+ software businesses growing with Bulsoft</p>
       <div className="w-11/12 mx-auto mt-6">
       <AliceCarousel
         autoPlay
-        autoPlayInterval={2000}
-        infinite
+        autoPlayInterval={500}
+        // infinite
         disableButtonsControls
         disableDotsControls
         responsive={responsive}
